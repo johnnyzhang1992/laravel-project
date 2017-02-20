@@ -123,6 +123,14 @@ h3.divider:after {
 .pull-xs-left {
   float: left !important;
 }
+@media (min-width: 544px){
+  .pull-sm-left {
+    float: left !important;
+  }
+  .pull-sm-right {
+    float: right !important;
+  }
+}
 
 .bg-cover {
   width: 100%;
@@ -371,3 +379,11 @@ footer hr {
 .modal-content {
   border-radius: 0;
 }
+
+/* Visibility */
+@media (min-width: 544px){
+  .hidden-sm-up {
+    display: none !important;
+  }
+}
+

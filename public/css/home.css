@@ -5790,6 +5790,11 @@ button.close {
 .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.active:focus, .navbar-dark .navbar-nav .nav-link.active:hover {
   color: #e60012; }
 
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
 html, body {
   height: 100%; }
 
@@ -5893,6 +5898,12 @@ h3.divider:after {
 
 .pull-xs-left {
   float: left !important; }
+
+@media (min-width: 544px) {
+  .pull-sm-left {
+    float: left !important; }
+  .pull-sm-right {
+    float: right !important; } }
 
 .bg-cover {
   width: 100%;
@@ -6104,6 +6115,11 @@ footer hr {
 /* MODAL */
 .modal-content {
   border-radius: 0; }
+
+/* Visibility */
+@media (min-width: 544px) {
+  .hidden-sm-up {
+    display: none !important; } }
 
 html, body {
   color: #505050;
