@@ -1,0 +1,40 @@
+//font size
+
+$font-size-h1: 2.6em !default;
+$font-size-h2: 2em !default;
+$font-size-h3: 1.8em !default;
+$font-size-h4: 1.6em !default;
+$font-size-h5: 1.4em !default;
+$font-size-h6: 1.2em !default;
+
+
+$colorPrimary: #205081;
+$colorPrimaryDark:  darken($colorPrimary,10%);
+$colorPrimaryDarkTransparent: rgba($colorPrimary, 0.25);
+$colorAccent: #FF6E40;
+$widgetHeaderBgColor: #F5F8FA;
+
+$widgetPaddingLeftRight: 20px;
+$postItemPaddingLeftRight: 25px;
+$postItemPaddingUpDown: 20px;
+
+$shadowColor: #666666;
+$shadowBlur: 3px;
+
+$footerHeight: 60px;
+
+$userProfileHeight: 150px;
+$userAvatarRadius: 45px;
+
+$metaColor: #959595;
+
+/* bootstrap*/
+$brand-primary: $colorPrimary;
+$body-bg: #eee;
+
+$dropdown-link-color: white;
+$dropdown-bg: $colorPrimary;
+$dropdown-divider-bg: $colorPrimaryDark;
+$dropdown-link-hover-color: $colorAccent;
+
+@import "bootstrap-sass/assets/stylesheets/bootstrap";

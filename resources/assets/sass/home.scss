@@ -1,0 +1,29 @@
+// import part css
+@import "header";
+@import "footer";
+@import "theme";
+
+html, body {
+  color: #505050;
+  font-size: 14px;
+  height: 100%;
+  position: relative;
+  background: $body-bg;
+  font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+}
+#navbar{
+  padding: 15px 0;
+  line-height: 50px;
+  margin-bottom: 0;
+}
+@media (max-width: 768px){
+  #navbar .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .navbar-toggleable-sm{
+    margin: 0;
+  }
+}
