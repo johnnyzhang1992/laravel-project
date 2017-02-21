@@ -5845,6 +5845,7 @@ h3.divider:after {
   .empty {
     height: 4rem; } }
 
+/* spacing style */
 .p-a-c {
   display: -ms-flexbox;
   display: flex;
@@ -5892,6 +5893,24 @@ h3.divider:after {
 .p-x-0 {
   padding-right: 0 !important;
   padding-left: 0 !important; }
+
+.p-x-1 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important; }
+
+.p-x-2 {
+  padding-right: 2rem !important;
+  padding-left: 2rem !important; }
+
+.p-x-3 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important; }
+
+.m-b-0 {
+  margin-bottom: 0 !important; }
+
+.d-block {
+  display: block !important; }
 
 .pull-xs-right {
   float: right !important; }
@@ -6121,18 +6140,24 @@ footer hr {
   .hidden-sm-up {
     display: none !important; } }
 
+/* text-emphasis*/
+.text-muted {
+  color: #888 !important; }
+
 html, body {
   color: #505050;
-  font-size: 14px;
-  height: 100%;
+  height: auto;
+  overflow-x: hidden;
   position: relative;
-  background: #eee;
   font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif; }
 
 #navbar {
   padding: 15px 0;
   line-height: 50px;
   margin-bottom: 0; }
+
+.overview {
+  background: #fff; }
 
 @media (max-width: 768px) {
   #navbar .container {

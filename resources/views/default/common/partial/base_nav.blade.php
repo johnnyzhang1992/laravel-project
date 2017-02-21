@@ -8,19 +8,16 @@
         </div>
         <ul class="nav navbar-nav pull-xs-right collapse navbar-toggleable-sm" id="CollapsingNavbar">
             <li class="nav-item">
-                <a class="nav-link" href="#overview">WEDO是什么</a>
+                <a class="nav-link" href="#intro">米酷介绍</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#locations">想在哪办公</a>
+                <a class="nav-link" href="#productions">米酷产品</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#service">专享孵化服务</a>
+                <a class="nav-link" href="#service">米酷相关</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#members">进驻团队</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#pr">媒体报道</a>
+                <a class="nav-link" href="#connect">联系米酷</a>
             </li>
         </ul>
     </div>

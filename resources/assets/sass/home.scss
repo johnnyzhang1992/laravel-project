@@ -5,10 +5,9 @@
 
 html, body {
   color: #505050;
-  font-size: 14px;
-  height: 100%;
+  height: auto;
+  overflow-x: hidden;
   position: relative;
-  background: $body-bg;
   font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
 }
 #navbar{
@@ -16,6 +15,10 @@ html, body {
   line-height: 50px;
   margin-bottom: 0;
 }
+.overview{
+  background: #fff;
+}
+
 @media (max-width: 768px){
   #navbar .container {
     margin-left: auto;
@@ -25,5 +28,8 @@ html, body {
   }
   .navbar-toggleable-sm{
     margin: 0;
+  }
+  .overview-content{
+
   }
 }

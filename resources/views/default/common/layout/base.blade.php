@@ -24,16 +24,11 @@
         <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
     @endif
     @yield('css')
-    @include('default.common.partial.baidu_tongji')
+    {{--@include('default.common.partial.baidu_tongji')--}}
 </head>
 <body id="body">
 @include('default.common.partial.base_nav')
-<div id="content-wrap">
-    <div class="container">
-
-    </div>
     @yield('content')
-</div>
 @include('default.common.partial.base_footer')
 @if(isset($site_js) && $site_js)
     <script src="{{ $site_js }}"></script>

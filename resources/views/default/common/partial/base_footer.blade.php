@@ -1,4 +1,4 @@
-<footer class="bg-inverse p-y-3" style="margin-top: 100px;position: absolute;left: 0;right: 0;bottom: 0">
+<footer class="bg-inverse p-y-3">
     <div class="container">
         <img class="img-fluid" src="{{ asset('/assets/images/common/logo.svg') }}">
         <hr class="m-y-2">
