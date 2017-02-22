@@ -30,7 +30,7 @@ var js = [
     // 'autosize.min.js',
     // 'imgLiquid-min.js',
     // 'codemirror-4.inline-attachment.js',
-    'resources/assets/js/app.js',
+    'resources/assets/js/home.js',
 ];
 elixir(function (mix) {
     mix

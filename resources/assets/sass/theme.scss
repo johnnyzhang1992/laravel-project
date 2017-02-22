@@ -132,6 +132,9 @@ h3.divider:after {
 .m-b-0 {
   margin-bottom: 0 !important;
 }
+.m-t-3 {
+  margin-top: 3rem !important;
+}
 .d-block {
   display: block !important;
 }
@@ -140,6 +143,9 @@ h3.divider:after {
 }
 .pull-xs-left {
   float: left !important;
+}
+.w-100 {
+  width: 100%;
 }
 @media (min-width: 544px){
   .pull-sm-left {
@@ -409,4 +415,22 @@ footer hr {
 .text-muted {
   color: #888 !important;
 }
+.text-xs-center {
+  text-align: center !important;
+}
 
+/*  card  */
+.card {
+  position: relative;
+  display: block;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: 0 solid transparent;
+}
+@media (min-width: 544px) {
+  .card-columns {
+    column-count: 3;
+    column-gap: 1.25rem;
+  }
+}

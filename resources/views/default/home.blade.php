@@ -4,16 +4,66 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <style>
+        .bg-cover{
+            background: url('/assets/images/home/home-banner.jpg');
+        }
+        .img-fluid {
+            display: inline-block;
+        }
+        .overview-key{
+            list-style: none;
+            padding-left: 0;
+            justify-content: center;
+            display: flex;
+        }
+        .overview-key li{
+            position: relative;
+            display: inline-flex;
+            border-radius: 50%;
+            border: 2px solid #eee;
+            margin: 10px;
+            padding: 10px;
+            min-height: 100px;
+            min-width:100px;
+        }
+        .overview-key li span{
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            justify-content: center;
+        }
+        @media(max-width:768px){
+            .overview-key li{
+                min-height: 70px;
+                min-width: 70px;
+            }
+        }
+        .members .card-columns {
+            -moz-column-count: 4;
+            column-count: 4;
+            -moz-column-gap: 30px;
+            column-gap: 30px;
+        }
+    </style>
 @endsection
 @section('content')
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    {{--首屏banner--}}
+    <section id="intro" class="fullscreen bg-cover bg-fixed p-a-c"  style="position: relative;">
+
+        <div class="container text-xs-center">
+            <img src="{{ asset('/assets/images/common/enlogo.svg') }}" class="img-fluid">
+            <h1 class="h3">三星S8曲面全覆盖钢化膜 • 防摔防磨 精准贴合<br></h1>
+            <ul class="overview-key clearfix">
+                <li><span>9H硬度</span></li>
+                <li><span>高清透</span></li>
+                <li><span>曲面<br>全屏覆盖</span></li>
+                <li><span>3D曲面</span></li>
+            </ul>
+        </div>
+    </section>
+    {{--介绍--}}
     <section id="overview" class="overview p-y-2">
         <div class="empty"></div>
         <div class="container">
@@ -37,10 +87,72 @@
         </div>
         <div class="empty"></div>
     </section>
+    {{--产品--}}
+    <section id="members" class="members bg-faded bg-fixed bg-cover">
+        <div class="empty"></div>
+        <div class="container">
+            <hgroup class="text-xs-center">
+                <h2 class="m-b-1">部分热销产品</h2>
+                <p class="text-muted m-b-0">成为我们的合作伙伴，放心采购优质产品，共赢广阔的数码市场</p>
+            </hgroup>
+            <div class="card-columns m-t-3 text-xs-center col-md-10 col-md-offset-1 col-xs-12">
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.aihuishou.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">专业的电子产品回收及环保</p>
+                    </a>
+                </div>
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.haloai.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">中国车内智能交互领跑者</p>
+                    </a>
+                </div>
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.gaomuxuexi.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">大数据驱动的个性化学习平台</p>
+                    </a>
+                </div>
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.gaomuxuexi.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">大数据驱动的个性化学习平台</p>
+                    </a>
+                </div>
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.gaomuxuexi.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">大数据驱动的个性化学习平台</p>
+                    </a>
+                </div>
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.gaomuxuexi.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">大数据驱动的个性化学习平台</p>
+                    </a>
+                </div>
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.gaomuxuexi.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">大数据驱动的个性化学习平台</p>
+                    </a>
+                </div>
+                <div class="card card-block">
+                    <a class="d-inline-block" href="http://www.gaomuxuexi.com">
+                        <img class="m-b-1 w-100" src="{{ asset('/assets/images/home/zealer.png') }}">
+                        <p class="card-text text-muted">大数据驱动的个性化学习平台</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="empty"></div>
+    </section>
 @endsection
 
 
 @section('script')
+    <script src="{{ asset('/js/tether.min.js') }}"></script>
     <script>
         $(function() {
             // collapse

@@ -33,7 +33,7 @@
 @if(isset($site_js) && $site_js)
     <script src="{{ $site_js }}"></script>
 @else
-    {{--<script src="{{ elixir('js/app.js') }}"></script>--}}
+    {{--<script src="{{ elixir('js/home.js') }}"></script>--}}
     <script src="{{ asset('js/app.js') }}"></script>
 @endif
 {{--<script src="{{ asset('/js/common.js') }}"></script>--}}

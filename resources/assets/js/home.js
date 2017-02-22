@@ -1,15 +1,14 @@
+$("[href='#']").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false
+});
 $("[href='#overview']").click(function () {
     var anchorPos = $("#overview").offset().top;
     $("html, body").animate({ scrollTop: anchorPos}, 600);
     return false
 });
-$("[href='#locations']").click(function () {
-    var anchorPos = $("#locations").offset().top;
-    $("html, body").animate({ scrollTop: anchorPos}, 600);
-    return false
-});
-$("[href='#service']").click(function () {
-    var anchorPos = $("#service").offset().top;
+$("[href='#intro']").click(function () {
+    var anchorPos = $("#intro").offset().top;
     $("html, body").animate({ scrollTop: anchorPos}, 600);
     return false
 });
@@ -18,8 +17,8 @@ $("[href='#members']").click(function () {
     $("html, body").animate({ scrollTop: anchorPos}, 600);
     return false
 });
-$("[href='#pr']").click(function () {
-    var anchorPos = $("#pr").offset().top;
+$("[href='#connect']").click(function () {
+    var anchorPos = $("#connect").offset().top;
     $("html, body").animate({ scrollTop: anchorPos}, 600);
     return false
 });
