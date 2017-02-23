@@ -26,7 +26,7 @@
     @yield('css')
     {{--@include('default.common.partial.baidu_tongji')--}}
 </head>
-<body id="body">
+<body id="body" data-spy="scroll" data-target="#navbar" data-offset="">
 @include('default.common.partial.base_nav')
     @yield('content')
 @include('default.common.partial.base_footer')

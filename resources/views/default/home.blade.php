@@ -3,50 +3,7 @@
 @section('title','米酷科技-首页')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <style>
-        .bg-cover{
-            background: url('/assets/images/home/home-banner.jpg');
-        }
-        .img-fluid {
-            display: inline-block;
-        }
-        .overview-key{
-            list-style: none;
-            padding-left: 0;
-            justify-content: center;
-            display: flex;
-        }
-        .overview-key li{
-            position: relative;
-            display: inline-flex;
-            border-radius: 50%;
-            border: 2px solid #eee;
-            margin: 10px;
-            padding: 10px;
-            min-height: 100px;
-            min-width:100px;
-        }
-        .overview-key li span{
-            width: 100%;
-            display: inline-flex;
-            align-items: center;
-            vertical-align: middle;
-            justify-content: center;
-        }
-        @media(max-width:768px){
-            .overview-key li{
-                min-height: 70px;
-                min-width: 70px;
-            }
-        }
-        .members .card-columns {
-            -moz-column-count: 4;
-            column-count: 4;
-            -moz-column-gap: 30px;
-            column-gap: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ elixir('css/home.css') }}">
 @endsection
 @section('content')
     {{--首屏banner--}}
@@ -152,7 +109,6 @@
 
 
 @section('script')
-    <script src="{{ asset('/js/tether.min.js') }}"></script>
     <script>
         $(function() {
             // collapse
