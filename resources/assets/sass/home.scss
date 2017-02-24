@@ -19,11 +19,24 @@ html, body {
 }
 
 .bg-cover{
-  background: url('/assets/images/home/home-banner.jpg');
+  background-image: url('/assets/images/home/home-banner.jpg');
 }
+.members-bg-cover{
+  background-image: url('/assets/images/home/members-bg.jpg');
+}
+@media (min-width: 1366px) {
+  .bg-fixed {
+    background-position: center bottom;
+    background-attachment: inherit;
+  }
+}
+
 .img-fluid {
   display: inline-block;
 }
+//#intro .img-fluid ,#connect .img-fluid{
+//  max-width: 300px;
+//}
 //自定义
 .overview-key{
   list-style: none;

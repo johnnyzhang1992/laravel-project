@@ -1,6 +1,6 @@
 @extends('default.common.layout.base')
 
-@section('title','米酷科技-首页')
+@section('title','米酷-遇见更好的你')
 
 @section('css')
     <link rel="stylesheet" href="{{ elixir('css/home.css') }}">
@@ -10,7 +10,7 @@
     <section id="intro" class="fullscreen bg-cover bg-fixed p-a-c"  style="position: relative;">
 
         <div class="container text-xs-center">
-            <img src="{{ asset('/assets/images/common/enlogo.svg') }}" class="img-fluid">
+            <img src="{{ asset('/assets/images/home/logo-1.png') }}" class="img-fluid" style="max-width: 300px">
             <h1 class="h3">三星S8曲面全覆盖钢化膜 • 防摔防磨 精准贴合<br></h1>
             <ul class="overview-key clearfix">
                 <li><span>9H硬度</span></li>
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="overview-content col-md-10 col-md-offset-1 col-xs-12">
                     <hgroup>
-                        <img src="{{ asset('/assets/images/common/enlogo.svg') }}" class="d-block p-x-c p-x-2">
+                        <img src="{{ asset('/assets/images/home/logo.png') }}" class="d-block p-x-c p-x-2">
                         <p class="text-muted">
                             Meetcool.Vip 品牌由我司米酷科技注册成立，公司专注于高品质的数码产品的研发与生产，
                             为广大中小商家及消费者提供质优价良的产品与服务。目前，米酷可以已于数十家工厂、品牌商
@@ -45,7 +45,7 @@
         <div class="empty"></div>
     </section>
     {{--产品--}}
-    <section id="members" class="members bg-faded bg-fixed bg-cover">
+    <section id="members" class="members bg-faded bg-fixed ng-cover members-bg-cover">
         <div class="empty"></div>
         <div class="container">
             <hgroup class="text-xs-center">

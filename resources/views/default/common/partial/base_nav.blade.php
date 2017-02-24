@@ -2,7 +2,7 @@
     <div class="container clearfix">
         <div class="navbar-brand p-y-0 m-r-0">
             <a class="logo pull-xs-left d-block" href="#">
-                <img src="{{ asset('assets/images/common/logo.gif') }}">
+                <img src="{{ asset('assets/images/home/logo-1.png') }}">
             </a>
             <button class="navbar-toggler hidden-md-up pull-xs-right p-y-c" type="button" data-toggle="collapse" data-target="#CollapsingNavbar"><i class="fa fa-bars"></i> MENU</button>
         </div>

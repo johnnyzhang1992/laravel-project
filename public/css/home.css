@@ -6148,7 +6148,8 @@ footer hr {
 
 /* text-emphasis*/
 .text-muted {
-  color: #888 !important; }
+  color: #888 !important;
+  text-indent: 2em; }
 
 .text-xs-center {
   text-align: center !important; }
@@ -6183,7 +6184,15 @@ html, body {
   background: #fff; }
 
 .bg-cover {
-  background: url("/assets/images/home/home-banner.jpg"); }
+  background-image: url("/assets/images/home/home-banner.jpg"); }
+
+.members-bg-cover {
+  background-image: url("/assets/images/home/members-bg.jpg"); }
+
+@media (min-width: 1366px) {
+  .bg-fixed {
+    background-position: center bottom;
+    background-attachment: inherit; } }
 
 .img-fluid {
   display: inline-block; }
