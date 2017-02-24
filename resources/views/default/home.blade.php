@@ -110,6 +110,7 @@
 
 @section('script')
     <script>
+        console.info('建站请联系：me@johnnyzhang.cn');
         $(function() {
             // collapse
             $('.navbar-nav').on('shown.bs.collapse', function () {
