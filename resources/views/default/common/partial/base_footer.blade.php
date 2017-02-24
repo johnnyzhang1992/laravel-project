@@ -19,6 +19,6 @@
             </div>
         </div>
         <hr class="m-y-2">
-        <p class="small text-muted">© WEDO UNION 2017. All Rights Reserved. <br><!-- <a href="#">粤ICP备12011603-1号</a> --></p>
+        <p class="small text-muted">© MeetCool 2017. All Rights Reserved. <span href="#">粤ICP备17011677号-1</span></p>
     </div>
 </footer>

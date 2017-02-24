@@ -6148,7 +6148,9 @@ footer hr {
 
 /* text-emphasis*/
 .text-muted {
-  color: #888 !important;
+  color: #888 !important; }
+
+.text-indent {
   text-indent: 2em; }
 
 .text-xs-center {
