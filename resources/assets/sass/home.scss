@@ -69,10 +69,13 @@ html, body {
 }
 @media(min-width: 768px){
   .members .card-columns {
-    -moz-column-count: 4;
+    min-height: 360px;
     column-count: 4;
-    -moz-column-gap: 30px;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
     column-gap: 30px;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
   }
 }
 @media (max-width: 768px){

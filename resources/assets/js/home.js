@@ -1,7 +1,7 @@
-$("[href='#']").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 600);
-    return false
-});
+// $("[href='#']").click(function () {
+//     $("html, body").animate({ scrollTop: 0 }, 600);
+//     return false
+// });
 $("[href='#overview']").click(function () {
     var anchorPos = $("#overview").offset().top;
     $("html, body").animate({ scrollTop: anchorPos}, 600);
