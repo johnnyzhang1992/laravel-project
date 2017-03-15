@@ -20,5 +20,11 @@
                 <a class="nav-link" href="#connect">联系米酷</a>
             </li>
         </ul>
+        @if(Auth::check())
+            <div class="user">
+                用户：{{ @auth()->user()->name  }}
+            </div>
+        @endif
+
     </div>
 </nav>

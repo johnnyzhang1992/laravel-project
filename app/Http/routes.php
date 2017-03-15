@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('default.home');
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -26,6 +22,7 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+Route::group(['middleware' => 'web'], function () {
+    Route::auth(); //登录验证
+    Route::get('/', 'HomeController@index');
 });
