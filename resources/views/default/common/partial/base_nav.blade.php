@@ -19,12 +19,23 @@
             <li class="nav-item">
                 <a class="nav-link" href="#connect">联系米酷</a>
             </li>
+            @if(Auth::guest())
+                <li class="nav-item user">
+                    <a  class="nav-link" href="/register">注册</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">登录</a>
+                </li>
+            @else
+                <li class="nav-item user">
+                    <a  class="nav-link" href="/admin">用户：{{ Auth::user()->name   }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">登出</a>
+                </li>
+            @endif
         </ul>
-        @if(Auth::check())
-            <div class="user">
-                用户：{{ @auth()->user()->name  }}
-            </div>
-        @endif
+
 
     </div>
 </nav>

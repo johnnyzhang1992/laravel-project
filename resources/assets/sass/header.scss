@@ -1,6 +1,11 @@
 // header css
 @import "common";
 
+#navbar{
+  padding: 15px 0;
+  line-height: 50px;
+  margin-bottom: 0;
+}
 .navbar-nav .nav-item {
   float: left;
 }
