@@ -15,4 +15,5 @@ class Controller extends BaseController
         $user = auth()->user();
         return $user;
     }
+
 }

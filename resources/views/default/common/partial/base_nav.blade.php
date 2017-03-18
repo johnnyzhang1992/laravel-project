@@ -7,18 +7,7 @@
             <button class="navbar-toggler hidden-md-up pull-xs-right p-y-c" type="button" data-toggle="collapse" data-target="#CollapsingNavbar"><i class="fa fa-bars"></i> MENU</button>
         </div>
         <ul class="nav navbar-nav pull-xs-right collapse navbar-toggleable-sm" id="CollapsingNavbar">
-            <li class="nav-item">
-                <a class="nav-link" href="#overview">米酷相关</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#intro">米酷介绍</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#members">米酷产品</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#connect">联系米酷</a>
-            </li>
+            @include('default.common.partial.top_menu')
             @if(Auth::guest())
                 <li class="nav-item user">
                     <a  class="nav-link" href="/register">注册</a>

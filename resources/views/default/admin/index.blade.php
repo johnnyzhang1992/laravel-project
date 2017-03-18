@@ -1,4 +1,4 @@
-@extends('default.common.layout.base')
+@extends('default.common.layout.admin')
 
 @section('title','米酷-遇见更好的你')
 
