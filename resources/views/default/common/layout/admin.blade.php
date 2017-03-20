@@ -25,6 +25,7 @@
     @yield('css')
 </head>
 <body id="body" data-spy="scroll" data-target="#navbar" data-offset="">
+{{--@include('default.common.partial.nav_admin')--}}
 @include('default.common.partial.nav_admin')
 @yield('content')
 @if(isset($site_js) && $site_js)

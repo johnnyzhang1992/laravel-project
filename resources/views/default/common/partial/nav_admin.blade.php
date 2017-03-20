@@ -15,12 +15,24 @@
                 <a class="nav-link" href="/login">登录</a>
             </li>
             @else
-            <li class="nav-item user">
-                <a  class="nav-link" href="/admin">用户：{{ Auth::user()->name   }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/logout">登出</a>
-            </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="">
+                        <span>{{ Auth::user()->name }}</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/">回到站点</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                退出登录
+                            </a>
+                        </li>
+                        <form id="logout-form" action="http://johnnyzhang.cn/logout" method="POST" style="display: none;">
+                            <input type="hidden" name="_token" value="ppAoXHcmhMaotuLg5Iwd4D0oSq4dMIjKwgsHS7ti">
+                        </form>
+                    </ul>
+                </li>
             @endif
         </ul>
 
