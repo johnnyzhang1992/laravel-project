@@ -8,14 +8,7 @@
         </div>
         <ul class="nav navbar-nav pull-xs-right collapse navbar-toggleable-sm" id="CollapsingNavbar">
             @include('default.common.partial.top_menu')
-            @if(Auth::guest())
-                <li class="nav-item user">
-                    <a  class="nav-link" href="/register">注册</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">登录</a>
-                </li>
-            @else
+            @if(Auth::check())
                 <li class="nav-item user">
                     <a  class="nav-link" href="/admin">用户：{{ Auth::user()->name   }}</a>
                 </li>
@@ -24,7 +17,5 @@
                 </li>
             @endif
         </ul>
-
-
     </div>
 </nav>

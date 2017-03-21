@@ -1,40 +1,23 @@
-<nav id="navbar" class="navbar bg-inverse navbar-dark p-x-0 p-y-1">
-    <div class="container clearfix">
-        <div class="navbar-brand p-y-0 m-r-0">
-            <a class="logo pull-xs-left d-block" href="{{ url("/") }}">
-            <img src="{{ asset('assets/images/home/logo-1.png') }}">
-            </a>
-            <button class="navbar-toggler hidden-md-up pull-xs-right p-y-c" type="button" data-toggle="collapse" data-target="#CollapsingNavbar"><i class="fa fa-bars"></i> MENU</button>
+<!--header start-->
+<header class="header black-bg" style="top: 0;@if(Auth::guest()) position:relative; @endif">
+    @if(Auth::check())
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
-        <ul class="nav navbar-nav pull-xs-right collapse navbar-toggleable-sm" id="CollapsingNavbar">
-            @if(Auth::guest())
-            <li class="nav-item user">
-                <a  class="nav-link" href="/register">注册</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login">登录</a>
-            </li>
+    @endif
+    <!--logo start-->
+    <a href="/admin" class="logo"><b>DASHGUM MEETCOOL</b></a>
+    <!--logo end-->
+    <div class="nav">
+        <ul class="nav pull-right top-menu">
+            @if(Auth::check())
+                <li><a class="logout" href="#">{{ Auth::user()->name }}</a></li>
+                <li><a class="logout" href="{{ url('/logout') }}">登出</a></li>
             @else
-                <li class="nav-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="">
-                        <span>{{ Auth::user()->name }}</span>
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="/">回到站点</a></li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                退出登录
-                            </a>
-                        </li>
-                        <form id="logout-form" action="http://johnnyzhang.cn/logout" method="POST" style="display: none;">
-                            <input type="hidden" name="_token" value="ppAoXHcmhMaotuLg5Iwd4D0oSq4dMIjKwgsHS7ti">
-                        </form>
-                    </ul>
-                </li>
+                <li><a class="logout" href="{{ url('/register') }}">注册</a></li>
+                <li><a class="logout" href="{{ url('/login') }}">登录</a></li>
             @endif
         </ul>
-
     </div>
-</nav>
+</header>
+<!--header end-->

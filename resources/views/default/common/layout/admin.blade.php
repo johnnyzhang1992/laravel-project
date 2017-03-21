@@ -22,17 +22,29 @@
     @else
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @endif
+    <link href="{{ asset('/css/manage/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/manage/style-responsive.css') }}" rel="stylesheet">
     @yield('css')
 </head>
 <body id="body" data-spy="scroll" data-target="#navbar" data-offset="">
-{{--@include('default.common.partial.nav_admin')--}}
 @include('default.common.partial.nav_admin')
-@yield('content')
+<section id="container" >
+    @include('default.admin.partial.left_menu')
+    @yield('content')
+</section>
 @if(isset($site_js) && $site_js)
     <script src="{{ $site_js }}"></script>
 @else
     <script src="{{ asset('js/app.js') }}"></script>
 @endif
+<script src="{{ asset('js/manage/jquery-ui-1.9.2.custom.min.js') }}"></script>
+<script src="{{ asset('/js/manage/jquery.ui.touch-punch.min.js') }}"></script>
+<script class="include" type="text/javascript" src="{{ asset('/js/manage/jquery.dcjqaccordion.2.7.js') }}"></script>
+<script src="{{ asset('/js/manage/jquery.scrollTo.min.js') }}"></script>
+<script src="{{ asset('js/manage/jquery.nicescroll.js') }}" type="text/javascript"></script>
+
+<!--common script for all pages-->
+<script src="{{ asset('/js/manage/common-scripts.js') }}"></script>
 @yield('script')
 </body>
 </html>
