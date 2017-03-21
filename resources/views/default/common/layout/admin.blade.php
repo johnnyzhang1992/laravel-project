@@ -29,8 +29,12 @@
 <body id="body" data-spy="scroll" data-target="#navbar" data-offset="">
 @include('default.common.partial.nav_admin')
 <section id="container" >
-    @include('default.admin.partial.left_menu')
+    @if(Auth::check())
+        @include('default.admin.partial.left_menu')
+    @endif
+
     @yield('content')
+    @include('default.admin.partial.footer')
 </section>
 @if(isset($site_js) && $site_js)
     <script src="{{ $site_js }}"></script>

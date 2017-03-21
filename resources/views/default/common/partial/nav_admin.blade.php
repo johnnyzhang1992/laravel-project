@@ -1,5 +1,5 @@
 <!--header start-->
-<header class="header black-bg" style="top: 0;@if(Auth::guest()) position:relative; @endif">
+<header class="header black-bg" style="top: 0;">
     @if(Auth::check())
         <div class="sidebar-toggle-box">
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>

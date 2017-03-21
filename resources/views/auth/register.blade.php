@@ -3,7 +3,7 @@
 @section('css')
     <style>
         .content{
-            margin-top: 20px;
+            padding-top: 80px;
         }
     </style>
 @endsection
