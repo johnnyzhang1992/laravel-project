@@ -307,8 +307,8 @@ ul.sidebar-menu li ul.sub li:last-child{
 }
 
 ul.sidebar-menu li ul.sub li a {
+    padding: 0px 10px;
     font-size: 12px;
-    padding: 6px 0;
     line-height: 35px;
     height: 35px;
     -webkit-transition: all 0.3s ease;
@@ -363,7 +363,7 @@ ul.sidebar-menu li a{
     transition: all 0.3s ease;
 }
 
-ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+ul.sidebar-menu li ul.sub li  a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
     background: #68dff0;
     color: #fff;
     display: block;
@@ -985,7 +985,7 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 250px;
+	height: 150px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
