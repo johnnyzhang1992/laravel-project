@@ -12,13 +12,13 @@
 */
 Route::group(['middleware' => 'web'], function () {
     Route::get('/ ','HomeController@index');
-
 });
 
-Route::group(["prefix" => 'admin','middleware' => 'web','auth'], function () {
-    Route::get('/', 'AdminController@index');
-    Route::get('/seo', 'AdminController@seo');
-    Route::post('/seo/update', 'AdminController@seoUpdate');
-    Route::get('/company', 'AdminController@company');
-    Route::post('/company/update', 'AdminController@companyUpdate');
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('/admin', 'AdminController@index');
+    Route::get('/admin/seo', 'AdminController@seo');
+    Route::post('/admin/seo/update', 'AdminController@seoUpdate');
+    Route::get('/admin/company', 'AdminController@company');
+    Route::post('/admin/company/update', 'AdminController@companyUpdate');
 });
