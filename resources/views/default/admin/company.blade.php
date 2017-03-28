@@ -73,6 +73,19 @@
                                         <textarea class="summernote form-control"  name="intro">{!! @$company->intro !!}</textarea>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">公司介绍-logo</label>
+                                    <div class="col-sm-8">
+                                        <div class="col-sm-4">
+                                            <img src="{{ url(@$company->intro_logo) }}" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="form-group col-sm-8">
+                                            <form action="">
+                                                <label for="intro_logo" class="control-label col-sm-3">上传图片:</label>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="form-group">
                                     <div class="col-sm-8 col-sm-offset-2">

@@ -34,7 +34,7 @@
     @endif
 
     @yield('content')
-    @include('default.admin.partial.footer')
+    {{--@include('default.admin.partial.footer')--}}
 </section>
 @if(isset($site_js) && $site_js)
     <script src="{{ $site_js }}"></script>

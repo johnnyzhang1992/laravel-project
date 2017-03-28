@@ -29,6 +29,7 @@ class AdminController extends Controller{
         if($_site){
             $_ret['site_copy'] = $_site[0]->site_copy;
             $_ret['site_beian'] = $_site[0]->site_beian;
+            $_ret['site_logo'] = $_site[0]->site_logo;
             $_ret['site_title'] = $_site[0]->site_title;
             $_ret['site_author'] = $_site[0]->site_author;
             $_ret['site_keywords'] = $_site[0]->site_keywords;
