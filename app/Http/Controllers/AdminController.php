@@ -27,6 +27,8 @@ class AdminController extends Controller{
         $_ret =[];
         $_site = DB::table('maps')->get();
         if($_site){
+            $_ret['site_copy'] = $_site[0]->site_copy;
+            $_ret['site_beian'] = $_site[0]->site_beian;
             $_ret['site_title'] = $_site[0]->site_title;
             $_ret['site_author'] = $_site[0]->site_author;
             $_ret['site_keywords'] = $_site[0]->site_keywords;
@@ -39,6 +41,8 @@ class AdminController extends Controller{
     }
     public function seoUpdate(Request $request){
         $_site = [];
+        $_site['site_beian'] = $request->input('beian');
+        $_site['site_copy'] = $request->input('copy');
         $_site['site_author'] = $request->input('author');
         $_site['site_title'] = $request->input('site_title');
         $_site['site_keywords'] = $request->input('site_keywords');

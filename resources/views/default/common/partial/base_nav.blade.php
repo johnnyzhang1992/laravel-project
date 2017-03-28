@@ -9,9 +9,6 @@
         <ul class="nav navbar-nav pull-xs-right collapse navbar-toggleable-sm" id="CollapsingNavbar">
             @include('default.common.partial.top_menu')
             @if(Auth::check())
-                <li class="nav-item user">
-                    <a  class="nav-link" href="/admin">用户：{{ Auth::user()->name   }}</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">登出</a>
                 </li>

@@ -43,6 +43,18 @@
                             </div>
                             <div class="widget-body">
                                 <div class="form-group">
+                                    <label for="copy" class="col-sm-2 control-label">版权信息</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="copy" class="form-control" id="copy" placeholder="Copy Right &copy; 2017" value="{{ @$site_copy }}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="beian" class="col-sm-2 control-label">备案号</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="beian" class="form-control" id="beian" placeholder="备案号" value="{{ @$site_beian }}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="author" class="col-sm-2 control-label">作者</label>
                                     <div class="col-sm-8">
                                         <input type="text" name="author" class="form-control" id="author" placeholder="author" value="{{ @$site_author }}">
