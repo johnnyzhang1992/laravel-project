@@ -21,4 +21,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/admin/seo/update', 'AdminController@seoUpdate');
     Route::get('/admin/company', 'AdminController@company');
     Route::post('/admin/company/update', 'AdminController@companyUpdate');
+    Route::post('/admin/upload/logo', 'AdminController@uploadLogo');
+
 });

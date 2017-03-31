@@ -10,7 +10,7 @@
     <![endif]-->
     <link rel="stylesheet" href="{{ asset('/css/summernote.css') }}">
     <style>
-        #setting-form{
+        #setting-form,#upload-image{
             background: #fff;
             padding: 20px;
         }
@@ -73,19 +73,6 @@
                                         <textarea class="summernote form-control"  name="intro">{!! @$company->intro !!}</textarea>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">公司介绍-logo</label>
-                                    <div class="col-sm-8">
-                                        <div class="col-sm-4">
-                                            <img src="{{ url(@$company->intro_logo) }}" alt="" class="img-responsive">
-                                        </div>
-                                        <div class="form-group col-sm-8">
-                                            <form action="">
-                                                <label for="intro_logo" class="control-label col-sm-3">上传图片:</label>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="form-group">
                                     <div class="col-sm-8 col-sm-offset-2">
@@ -97,6 +84,40 @@
                             </div>
                         </div>
                     </form>
+                    <div class="col-sm-12 clearfix" id="upload-image">
+                        <div class="widget widget-default">
+                            <div class="widget-header">
+                                <h6>
+                                    <i class="fa fa-cog fa-fw"></i>公司介绍Logo设置
+                                </h6>
+                            </div>
+                            <div class="widget-body">
+                                <div class="form-group col-xs-12 clearfix">
+                                    <label class="col-xs-2 control-label" style="line-height: 50px">原图:</label>
+                                    <div class="col-xs-10">
+                                        <img src="{{ asset(@$company->intro_logo) }}" alt="" class="img-responsive" style="max-height: 70px">
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12">
+                                    <form action="{{ url('/admin/upload/logo') }}" role="form" class="form-horizontal" datatype="image" required  enctype="multipart/form-data" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="type"  value="intro_logo">
+                                        <label for="image" class="col-xs-2  control-label">
+                                            上传到本地：<i class="fa fa-file-image-o fa-lg fa-fw"></i>
+                                        </label>
+                                        <div class="col-xs-6">
+                                            <input id="image" class="form-control" accept="image/gif,image/jpeg,image/jpg,image/png" type="file" name="image">
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <button type="submit" class="btn btn-primary">
+                                                上传
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

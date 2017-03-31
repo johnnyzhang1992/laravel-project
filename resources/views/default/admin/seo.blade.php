@@ -9,7 +9,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        #setting-form{
+        #setting-form,#upload-image{
             background: #fff;
             padding: 20px;
         }
@@ -34,6 +34,7 @@
             <h4>SEO 设置 &gt; </h4>
             <div class="row mt">
                 <div class="col-lg-12">
+                    @include('default.admin.partial.message')
                     <form role="form" id="setting-form" class="form-horizontal" action="{{ url('/admin/seo/update') }}" method="post">
                         <div class="widget widget-default">
                             <div class="widget-header">
@@ -41,6 +42,7 @@
                                     <i class="fa fa-cog fa-fw"></i>设置
                                 </h6>
                             </div>
+
                             <div class="widget-body">
                                 <div class="form-group">
                                     <label for="copy" class="col-sm-2 control-label">版权信息</label>
@@ -78,19 +80,6 @@
                                         <input class="form-control" type="text" name="site_description" placeholder="网站描述" value="{!! @$site_description !!}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">公司Logo</label>
-                                    <div class="col-sm-8">
-                                        <div class="col-sm-4">
-                                            <img src="{{ asset(@$site_logo) }}" alt="" class="img-responsive">
-                                        </div>
-                                        <div class="form-group col-sm-8">
-                                            <form action="">
-                                                <label for="intro_logo" class="control-label col-sm-3">上传图片:</label>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="form-group">
                                     <div class="col-sm-8 col-sm-offset-2">
@@ -102,11 +91,44 @@
                             </div>
                         </div>
                     </form>
+                    <div class="col-sm-12 clearfix" id="upload-image">
+                        <div class="widget widget-default">
+                            <div class="widget-header">
+                                <h6>
+                                    <i class="fa fa-cog fa-fw"></i>网站Logo设置
+                                </h6>
+                            </div>
+                            <div class="widget-body">
+                                <div class="form-group col-xs-12 clearfix">
+                                    <label class="col-xs-2 control-label" style="line-height: 50px">原图:</label>
+                                    <div class="col-xs-10" style="background: #333">
+                                        <img src="{{ asset(@$site_logo) }}" alt="" class="img-responsive" style="max-height: 70px">
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12">
+                                    <form action="{{ url('/admin/upload/logo') }}" role="form" class="form-horizontal" datatype="image" required  enctype="multipart/form-data" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="type"  value="site_logo">
+                                        <label for="image" class="col-xs-2  control-label">
+                                            上传到本地：<i class="fa fa-file-image-o fa-lg fa-fw"></i>
+                                        </label>
+                                        <div class="col-xs-6">
+                                            <input id="image" class="form-control" accept="image/gif,image/jpeg,image/jpg,image/png" type="file" name="image">
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <button type="submit" class="btn btn-primary">
+                                                上传
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </section><
-
 @endsection
 
 @section('script')

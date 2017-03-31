@@ -10,8 +10,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 use App\User;
 use DB;
+use App\File;
+use Storage;
 
 class AdminController extends Controller{
 
@@ -77,6 +80,39 @@ class AdminController extends Controller{
             return back()->with('success','保存成功！');
         }else{
             return back()->with('error','保存失败！');
+        }
+    }
+    public function uploadLogo(Request $request){
+        $this->validate($request, [
+            'image' => 'required|image|max:5000'
+        ]);
+        $file = $request->file('image');
+        $type = $request->input('type');
+        $bool = null;
+        // 获取文件相关信息
+        $originalName = $file->getClientOriginalName(); // 文件原名
+        $ext = $file->getClientOriginalExtension();     // 扩展名
+        $realPath = $file->getRealPath();   //临时文件的绝对路径
+        $img_type = $file->getClientMimeType();     // image/jpeg
+        // 上传文件
+        $filename = 'logo'.'-'.uniqid();
+        if($type == 'site_logo' || $type == 'intro_logo'){
+            $bool = Storage::disk('logo')->put($filename.'.'.$ext, file_get_contents($realPath));
+        }else{
+            $bool = Storage::disk('pro')->put($filename.'.'.$ext, file_get_contents($realPath));
+        }
+        if($bool){
+            $path = '/assets/images/logo/'.$filename.'.'.$ext;
+            if($type == 'site_logo'){
+                DB::table('maps')->update(['site_logo'=>$path]);
+            }else if($type == 'intro_logo'){
+                DB::table('company')->update(['intro_logo'=>$path]);
+            }else{
+
+            }
+            return back()->with('success','图片保存成功');
+        }else{
+            return back()->with('error','图片保存失败');
         }
     }
 

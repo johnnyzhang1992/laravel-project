@@ -50,7 +50,22 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+//            'root' => storage_path('app/public'),
+            'root' => public_path('/assets/images/home'),
+            'visibility' => 'public',
+        ],
+
+        'pro' => [
+            'driver' => 'local',
+//            'root' => storage_path('app/public'),
+            'root' => public_path('/assets/images/pro/'),
+            'visibility' => 'public',
+        ],
+
+        'logo' => [
+            'driver' => 'local',
+//            'root' => storage_path('app/public'),
+            'root' => public_path('/assets/images/logo/'),
             'visibility' => 'public',
         ],
 
